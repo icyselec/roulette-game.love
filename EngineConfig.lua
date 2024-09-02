@@ -1,0 +1,3 @@
+return {
+	ClientTickRate = 120,
+}
