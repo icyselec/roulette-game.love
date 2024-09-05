@@ -2,18 +2,16 @@ local GameObject = require 'GameObject'
 
 ---@class RouletteController: GameObject
 ---@field rotationSpeed? number
-local RouletteController = GameObject:new()
+local RouletteController = GameObject:def()
 
 function RouletteController:new (o)
-	o = self:super(o, true)
+	o = self:base(o, true)
 
-	if not o:typeof(o) then
-		o.rotationSpeed = 0
-		assert(o.image, "expected an image")
-		assert(o.x, "expected x position")
-		assert(o.y, "expected y position")
-		o.angle = 0
-	end
+	o.rotationSpeed = 0
+	assert(o.image, "expected an image")
+	assert(o.x, "expected x position")
+	assert(o.y, "expected y position")
+	o.angle = 0
 
 	return o
 end

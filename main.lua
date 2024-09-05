@@ -1,4 +1,4 @@
-love.filesystem.setRequirePath(love.filesystem.getRequirePath() .. ';lib/?.lua')
+love.filesystem.setRequirePath(love.filesystem.getRequirePath() .. ';lib/?.lua;Yaoi/?.lua')
 
 local EngineConfig = require 'EngineConfig'
 

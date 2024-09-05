@@ -1,21 +1,19 @@
-local Object = require 'Object'
+local Yaoi = require 'Yaoi'
 
----@class GameObject: Object
+---@class GameObject: Yaoi
 ---@field image love.Image
 ---@field x number
 ---@field y number
 ---@field angle? number
 ---@field update? fun(self: self, dt: number)
 ---@field draw? fun(self: self)
-local GameObject = Object:new()
+local GameObject = Yaoi:def()
 
 function GameObject:new (o)
-	o = self:super(o, true)
+	o = self:base(o, true)
 
-	if not o:typeof(o) then
-		assert(o.image, "expected an image")
-		self.angle = self.angle or 0
-	end
+	assert(o.image, "expected an image")
+	self.angle = self.angle or 0
 
 	return o
 end

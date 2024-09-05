@@ -1,0 +1,3 @@
+[submodule "Yaoi"]
+	path = Yaoi
+	url = https://github.com/silo-project/Yaoi.git
